@@ -272,8 +272,8 @@ t = TRANSLATIONS[st.session_state.language]
 
 # Vehicle categories with icons
 VEHICLE_CATEGORIES = {
-    "🏍️ Three Wheeler": {
-        "icon": "🏍️",
+    "🛺 Three Wheeler": {
+        "icon": "🛺",
         "name": "Three Wheeler",
         "max_tenure": 60,
         "has_subcategory": False,
@@ -361,7 +361,7 @@ def send_inquiry_email(customer_name, customer_email, customer_phone, vehicle_in
                        vehicle_make=None, vehicle_model=None, registration_status=None, vehicle_type=None,
                        vehicle_image=None):
     """Send inquiry email to banker using Gmail SMTP"""
-    banker_email = "udarawarakaulla999@gmail.com"
+    banker_email = "keshara@sdb.lk"
     
     subject = f"Vehicle Leasing Inquiry - {vehicle_info['name']}"
     
@@ -960,6 +960,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
