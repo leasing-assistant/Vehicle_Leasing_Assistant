@@ -229,6 +229,60 @@ st.markdown("""
         background-color: white !important;
     }
     
+    /* Style selectbox dropdown for better visibility */
+    .stSelectbox select {
+        color: #2c3e50 !important;
+        background-color: white !important;
+    }
+    
+    /* Style dropdown options */
+    .stSelectbox option {
+        color: #2c3e50 !important;
+        background-color: white !important;
+        padding: 10px !important;
+    }
+    
+    .stSelectbox option:hover {
+        background-color: #e8f4f8 !important;
+        color: #2c3e50 !important;
+    }
+    
+    /* Override Streamlit's default select styling */
+    [data-baseweb="select"] {
+        background-color: white !important;
+    }
+    
+    [data-baseweb="select"] > div {
+        background-color: white !important;
+        color: #2c3e50 !important;
+    }
+    
+    /* Dropdown menu styling */
+    [data-baseweb="popover"] {
+        background-color: white !important;
+    }
+    
+    [role="listbox"] {
+        background-color: white !important;
+    }
+    
+    [role="option"] {
+        color: #2c3e50 !important;
+        background-color: white !important;
+        padding: 12px !important;
+    }
+    
+    [role="option"]:hover {
+        background-color: #e8f4f8 !important;
+        color: #2c3e50 !important;
+    }
+    
+    [role="option"][aria-selected="true"] {
+        background-color: #d4e9f7 !important;
+        color: #2c3e50 !important;
+        font-weight: 600 !important;
+    }
+    
     /* Markdown text - excluding buttons */
     .stMarkdown:not(.stButton *), .stMarkdown:not(.stButton *) p, .stMarkdown:not(.stButton *) span {
         color: #2c3e50 !important;
