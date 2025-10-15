@@ -9,7 +9,6 @@ from email import encoders
 from dotenv import load_dotenv
 import os
 import base64
-import base64
 
 # Helper function to convert image to base64
 def get_image_base64(image_path):
@@ -193,31 +192,61 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for attractive styling
+# Custom CSS for attractive styling with FIXED TEXT VISIBILITY
 st.markdown("""
     <style>
+    /* Force all text to be dark and visible on light background */
     .stApp {
         background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
                     url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&h=1080&fit=crop') no-repeat center center fixed;
         background-size: cover;
+        color: #2c3e50 !important;
     }
+    
+    /* Override all Streamlit text elements to be dark */
+    .stApp * {
+        color: #2c3e50 !important;
+    }
+    
+    /* Specific overrides for common elements */
+    p, span, div, label, h1, h2, h3, h4, h5, h6 {
+        color: #2c3e50 !important;
+    }
+    
+    /* Input labels and text */
+    .stTextInput label, .stNumberInput label, .stSelectbox label, 
+    .stSlider label, .stFileUploader label {
+        color: #2c3e50 !important;
+    }
+    
+    /* Input fields */
+    .stTextInput input, .stNumberInput input, .stSelectbox select {
+        color: #2c3e50 !important;
+        background-color: white !important;
+    }
+    
+    /* Markdown text */
+    .stMarkdown, .stMarkdown p, .stMarkdown span {
+        color: #2c3e50 !important;
+    }
+    
     .big-font {
         font-size: 50px !important;
         font-weight: bold;
-        color: #2c3e50;
+        color: #2c3e50 !important;
         text-align: center;
         margin-bottom: 30px;
     }
     .subtitle {
         font-size: 20px;
-        color: #7f8c8d;
+        color: #34495e !important;
         text-align: center;
         margin-bottom: 40px;
     }
     .stButton>button {
         width: 100%;
-        background: #2c3e50;
-        color: white;
+        background: #2c3e50 !important;
+        color: white !important;
         font-size: 18px;
         font-weight: bold;
         border: none;
@@ -226,25 +255,49 @@ st.markdown("""
         transition: all 0.3s ease;
     }
     .stButton>button:hover {
-        background: #34495e;
+        background: #34495e !important;
         transform: translateY(-2px);
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     .info-box {
         background: #f8f9fa;
         border: 2px solid #e9ecef;
-        color: #2c3e50;
+        color: #2c3e50 !important;
         padding: 20px;
         border-radius: 10px;
         margin: 20px 0;
     }
+    .info-box * {
+        color: #2c3e50 !important;
+    }
     .success-box {
         background: #d4edda;
         border: 2px solid #c3e6cb;
-        color: #155724;
+        color: #155724 !important;
         padding: 20px;
         border-radius: 10px;
         margin: 20px 0;
+    }
+    .success-box * {
+        color: #155724 !important;
+    }
+    
+    /* Sidebar text */
+    .css-1d391kg, [data-testid="stSidebar"] {
+        color: #2c3e50 !important;
+    }
+    [data-testid="stSidebar"] * {
+        color: #2c3e50 !important;
+    }
+    
+    /* Metric labels and values */
+    .stMetric label, .stMetric div {
+        color: #2c3e50 !important;
+    }
+    
+    /* Info, success, error boxes */
+    .stAlert {
+        color: #2c3e50 !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -960,8 +1013,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
