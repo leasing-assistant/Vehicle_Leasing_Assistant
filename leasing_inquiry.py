@@ -203,30 +203,34 @@ st.markdown("""
         color: #2c3e50 !important;
     }
     
-    /* Override all Streamlit text elements to be dark */
-    .stApp * {
+    /* Override all Streamlit text elements to be dark - EXCEPT buttons */
+    .stApp *:not(.stButton):not(.stButton *):not(button):not(button *) {
         color: #2c3e50 !important;
     }
     
-    /* Specific overrides for common elements */
-    p, span, div, label, h1, h2, h3, h4, h5, h6 {
+    /* Specific overrides for common elements - but not buttons */
+    p:not(.stButton p):not(.stButton *), 
+    span:not(.stButton span):not(.stButton *), 
+    div:not(.stButton div):not(.stButton *), 
+    label:not(.stButton label):not(.stButton *), 
+    h1, h2, h3, h4, h5, h6 {
         color: #2c3e50 !important;
     }
     
-    /* Input labels and text */
-    .stTextInput label, .stNumberInput label, .stSelectbox label, 
-    .stSlider label, .stFileUploader label {
+    /* Input labels and text - excluding buttons */
+    .stTextInput:not(.stButton *) label, .stNumberInput:not(.stButton *) label, .stSelectbox:not(.stButton *) label, 
+    .stSlider:not(.stButton *) label, .stFileUploader:not(.stButton *) label {
         color: #2c3e50 !important;
     }
     
-    /* Input fields */
-    .stTextInput input, .stNumberInput input, .stSelectbox select {
+    /* Input fields - excluding buttons */
+    .stTextInput:not(.stButton *) input, .stNumberInput:not(.stButton *) input, .stSelectbox:not(.stButton *) select {
         color: #2c3e50 !important;
         background-color: white !important;
     }
     
-    /* Markdown text */
-    .stMarkdown, .stMarkdown p, .stMarkdown span {
+    /* Markdown text - excluding buttons */
+    .stMarkdown:not(.stButton *), .stMarkdown:not(.stButton *) p, .stMarkdown:not(.stButton *) span {
         color: #2c3e50 !important;
     }
     
@@ -256,8 +260,13 @@ st.markdown("""
     }
     .stButton>button:hover {
         background: #34495e !important;
+        color: white !important;
         transform: translateY(-2px);
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    /* Ensure button text and all button children are white */
+    .stButton button, .stButton button * {
+        color: white !important;
     }
     .info-box {
         background: #f8f9fa;
@@ -282,21 +291,21 @@ st.markdown("""
         color: #155724 !important;
     }
     
-    /* Sidebar text */
-    .css-1d391kg, [data-testid="stSidebar"] {
+    /* Sidebar text - excluding buttons */
+    .css-1d391kg:not(.stButton *), [data-testid="stSidebar"]:not(.stButton *) {
         color: #2c3e50 !important;
     }
-    [data-testid="stSidebar"] * {
-        color: #2c3e50 !important;
-    }
-    
-    /* Metric labels and values */
-    .stMetric label, .stMetric div {
+    [data-testid="stSidebar"] *:not(.stButton):not(.stButton *):not(button):not(button *) {
         color: #2c3e50 !important;
     }
     
-    /* Info, success, error boxes */
-    .stAlert {
+    /* Metric labels and values - excluding buttons */
+    .stMetric:not(.stButton *) label, .stMetric:not(.stButton *) div {
+        color: #2c3e50 !important;
+    }
+    
+    /* Info, success, error boxes - excluding buttons */
+    .stAlert:not(.stButton *) {
         color: #2c3e50 !important;
     }
     </style>
