@@ -69,9 +69,9 @@ TRANSLATIONS = {
         "timeframe": "Timeframe for Leasing *",
         "timeframe_help": "When do you plan to get the vehicle?",
         "immediately": "Immediately",
-        "within_month": "Within a Month",
-        "within_3months": "Within 3 Months",
-        "more_than_3months": "More than 3 Months",
+        "within_two_days": "Within Two Days",
+        "within_one_week": "Within One Week",
+        "within_two_weeks": "Within Two Weeks",
         "contact_info": "👤 Contact Information",
         "name": "Full Name *",
         "name_placeholder": "Enter your full name",
@@ -149,9 +149,9 @@ TRANSLATIONS = {
         "timeframe": "ලීසිං සඳහා කාල රාමුව *",
         "timeframe_help": "ඔබ වාහනය ලබා ගැනීමට සැලසුම් කරන්නේ කවදාද?",
         "immediately": "වහාම",
-        "within_month": "මාසයක් ඇතුළත",
-        "within_3months": "මාස 3ක් ඇතුළත",
-        "more_than_3months": "මාස 3කට වඩා වැඩි කාලයක්",
+        "within_two_days": "දින දෙකක් ඇතුළත",
+        "within_one_week": "සතියක් ඇතුළත",
+        "within_two_weeks": "සති දෙකක් ඇතුළත",
         "contact_info": "👤 සම්බන්ධතා තොරතුරු",
         "name": "සම්පූර්ණ නම *",
         "name_placeholder": "ඔබගේ සම්පූර්ණ නම ඇතුළත් කරන්න",
@@ -960,7 +960,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 
 
