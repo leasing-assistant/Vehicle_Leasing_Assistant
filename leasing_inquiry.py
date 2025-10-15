@@ -737,7 +737,7 @@ def show_inquiry_page(sender_email, sender_password):
         timeframe_options = [
             t['immediately'],
             t['within_two_days'],
-            t['within_one_week']
+            t['within_one_week'],
             t['within_two_weeks']
         ]
         timeframe = st.selectbox(
@@ -960,6 +960,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
